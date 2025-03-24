@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      width: 500px;
+
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    img {
+      justify-content: center;
+      align-items: center;
+
+      height: 200px;
+      width: 200px;
+      z-index: 1;
+    }
+
+    h2 {
+      z-index: 1;
+    }
+
+    .card::before {
+      height: 900px;
+      width: 900px;
+      content: " ";
+      background: conic-gradient(red, blue, green, yellow);
+      position: absolute;
+      animation: rotate 5s infinite;
+    }
+
+    @keyframes rotate {
+      from {}
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      inset: 10px;
+      border-radius: 10px;
+    }
+
+
+
+
+
+
+    .animation {
+      height: 200px;
+      width: 200px;
+      background-color: aqua;
+      justify-items: center;
+      align-content: center;
+      border-radius: 20px;
+      margin: auto;
+      margin-top: 30px;
+      animation: scroll 3s linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 80%;
+    }
+
+    @keyframes scroll {
+      from {
+        opacity: 0;
+        clip-path: inset(100% 0 100% 0);
+        transform: translateX(-250px);
+      }
+
+      to {
+        opacity: 1.2;
+        transform: translateX(0px);
+      }
+    }
+
+    .main {
+      height: 50px;
+      border-bottom: 2px solid black;
+      overflow: hidden;
+      font-size: 20px;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 10;
+    }
+
+    .text {
+      height: 100%;
+      width: 100%;
+      animation: text 5s ease-in infinite;
+    }
+
+    @keyframes text {
+      0% {
+        transform: translateY(0);
+      }
+
+      15% {
+        transform: translateY(-100%);
+      }
+
+      30% {
+        transform: translateY(-200%);
+      }
+
+      45% {
+        transform: translateY(-300%);
+      }
+
+      60% {
+        transform: translateY(-400%);
+      }
+
+      75% {
+        transform: translateY(-500%);
+      }
+
+      90% {
+        transform: translateY(-600%);
+      }
+
+      100% {
+        transform: translateY(-700%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="text">
+      <h1>Frontend Developer</h1>
+    </div>
+    <div class="text">
+      <h1>Pratik Lone</h1>
+    </div>
+    <div class="text">
+      <h1>HTML</h1>
+    </div>
+    <div class="text">
+      <h1>CSS</h1>
+    </div>
+    <div class="text">
+      <h1>JAVA</h1>
+    </div>
+  </div>
+
+
+  <br>
+
+  <div class="card">
+    <img
+      src="https://i.pinimg.com/originals/5e/09/0c/5e090c20686499a2078d97af3cb070c6.jpg">
+    <h1>GOOD MORINING </h1>
+  </div>
+
+  <br />
+
+  <div class="animation">
+    <h1>Hello</h1>
+  </div>
+  <div class="animation">
+    <h1>Good Morning</h1>
+  </div>
+  <div class="animation">
+    <h1>how are you?</h1>
+  </div>
+  <div class="animation">
+    <h1>fine?</h1>
+  </div>
+  <div class="animation">
+    <h1>Whats going on?</h1>
+  </div>
+  <div class="animation">
+    <h1>OH! NICE</h1>
+  </div>
+  <div class="animation">
+    <h1>YES I AM GOOD</h1>
+  </div>
+  <div class="animation">
+    <h1>THANK YOU</h1>
+  </div>
+</body>
+
+</html>
